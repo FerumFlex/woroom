@@ -6,31 +6,42 @@
     <script src="./app.js"></script>
 </head>
 <body>
-<h1>WoroomToken</h1>
-<h2>Woroom Dapp</h2>
+<!--<h1>WoroomToken</h1>-->
+<div class="columns">
+    <div>
+        <h2>Woroom Dapp</h2>
+    </div>
+</div>
+<div class="columns">
+    <div>
+        <h3>Latest games</h3>
+        <div id="latest_games"></div>
+        <br><br>
+    </div>
 
-<h3>Latest games</h3>
-<div id="latest_games"></div>
-<br><br>
+    <div>
+        <h3>Buyed games</h3>
+        <div id="payed_games"></div>
+        <br/>
+        <br/>
+    </div>
+</div>
 
-<h3>Add game</h3>
-<br><label for="name">Name:</label><input type="text" id="name" placeholder="e.g., MegaGame"></input>
-<br><label for="amount">Amount (in finney):</label><input type="text" id="price" placeholder="e.g., 95334 "></input>
-<br><br>
-<button id="send" onclick="App.createGame()">Add game</button>
-
-<h3>Buyed games</h3>
-<div id="payed_games"></div>
-<br/>
-<br/>
-
-<h3>My games</h3>
+<h3>Added games by me</h3>
 <div id="my_games">
 
 </div>
 <br/>
 <br/>
 
+<h3>Add game</h3>
+<br><label for="name">Name:</label><input type="text" id="name" placeholder="e.g., MegaGame"></input>
+<br><label for="amount">Amount (in finney):</label><input type="text" id="price" placeholder="e.g., 95334 "></input>
+<br><br>
+
+<button id="add_game" onclick="App.createGame()" class="ladda-button" data-style="expand-right"><span class="ladda-label">Add game</span></button>
+
+<!--
 <h3>You have <span class="black"><span id="balance"></span> WoroomToken(WRT)</span></h3>
 
 <br>
@@ -40,9 +51,12 @@
                                                     placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
 <br><br>
 <button id="send" onclick="App.sendCoin()">Send WoroomToken</button>
+-->
+
 <br><br>
 <span id="status"></span>
 <br>
 <span class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</span>
+
 </body>
 </html>
