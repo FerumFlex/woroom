@@ -22596,6 +22596,8 @@ window.App = {
         GamesContract = value[0];
         WoroomContract = value[1];
 
+        window.GamesContract = GamesContract;
+
         //self.refreshBalance();
         self.renderMyGames();
         self.renderPayedGames();
@@ -22673,7 +22675,7 @@ window.App = {
 
   renderLatestGames: function() {
     var self = this;
-    GamesContract.getUserOwnerGameIds(name, price, {from: account}).then(function(value) {
+    GamesContract.getLatestGameIds().then(function(value) {
       return self.getGames(value);
     }).then(function(games){
       var parts = [];
